@@ -1,0 +1,26 @@
+{
+    "name": "dat/result-parser",
+    "description": "result parser for football.ch",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "ResultParser\\": "src/ResultParser/"
+        }
+    },
+    "require": {
+        "ext-mysqli": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "vlucas/phpdotenv": "^4.1",
+        "psr/log": "^1.1",
+        "monolog/monolog": "^2.2",
+        "fabpot/goutte": "^4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas D'Ascoli",
+            "email": "thomas@dasco.li"
+        }
+    ]
+}
