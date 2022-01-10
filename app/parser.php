@@ -1,6 +1,7 @@
 <?php
 
 use Goutte\Client;
+use ResultParser\AuxParser;
 
 require '../vendor/autoload.php';
 
@@ -47,6 +48,9 @@ function endsWith(string $haystack, array $needles) : bool {
 }
 
 $client = new Client();
+
+// RESULTATE
+/*
 $crawler = $client->request('GET', 'https://www.fvbj-afbj.ch/fussballverband-bern-jura/verband-fvbj/vereine-fvbj/verein-fvbj.aspx/v-1343/t-36636/ls-19012/sg-55270/a-pt/');
 $crawler->filter('.spiel')->each(function ($node) {
     $status = $node->filter('.telegramm-link')->text();
@@ -64,6 +68,13 @@ $crawler->filter('.spiel')->each(function ($node) {
         }
     }
 });
+*/
+
+// VEREINE
+ini_set('default_charset', 'utf-8');
+
+$aux = new AuxParser(__DIR__);
+$aux->associations();
 
 
 
